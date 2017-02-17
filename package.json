@@ -1,0 +1,34 @@
+{
+    "name": "angular-2-cube-slider",
+    "version": "1",
+    "description": "CubeSlider carousel with Angular 2",
+    "main": "src/index.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/softsimon/angular-2-dropdown-multiselect.git"
+    },
+    "keywords": [
+        "angular 2",
+        "dropdown",
+        "multi select"
+    ],
+    "author": "Simon Lindh",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/softsimon/angular-2-dropdown-multiselect/issues"
+    },
+    "homepage": "http://softsimon.github.io/angular-2-dropdown-multiselect",
+    "dependencies": {
+    },
+    "devDependencies": {
+        "@angular/common": "^2.4.3",
+        "@angular/compiler": "^2.4.3",
+        "@angular/core": "^2.4.3",
+        "@angular/forms": "^2.4.3",
+        "rxjs": "^5.0.3",
+        "zone.js": "^0.7.5",
+        "codelyzer": "^2.0.0-beta.4",
+        "tslint": "^4.3.1",
+        "typescript": "^2.1.5"
+    }
+}

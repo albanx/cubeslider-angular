@@ -1,0 +1,33 @@
+<div (window:resize)="onResize($event)" class="cs-container" #wrapper>
+    <div class="cs-slider" #slider>
+        <div *ngIf="loading === true" class="cs-loader"></div>
+
+        <a [hidden]="i !== currItem || animating" *ngFor="let element of elements; let i = index" href="http://www.albanx.com/" target="_blank" carouselItem>
+            <div [hidden]="i !== currItem" class="cs-title">{{element.html}}</div>
+            <img src="{{element.imageUrl}}" alt="" carouselImage>
+        </a>
+
+        <div *ngIf="animating" class="cs-animation-box"
+             [style.width.px]="renderWidth"
+             [style.height.px]="renderHeight"
+             [style.perspective]="settings.perspective + 'px'">
+
+            <template ngFor let-row [ngForOf]="rowsRange">
+                <template ngFor let-col [ngForOf]="colsRange">
+
+                    <carousel-cube [prevItem]="prevItem" [currItem]="currItem" (animationEnd)="cubeAnimationEnd($event);" [pos]="row+col-2" [row]="row-1" [col]="col-1" [options]="cubeOptions"></carousel-cube>
+
+                </template>
+            </template>
+        </div>
+    </div>
+
+    <div *ngIf="settings.addShadow" class="cs-shadow"></div>
+
+    <div *ngIf="settings.navigation" class="cs-nav-cont" style="position: absolute;">
+        <span *ngFor="let element of elements; let i = index " [class]="i === currItem ? 'cs-current' : '' " (click)="onNavClick(i)"></span>
+    </div>
+
+    <div *ngIf="settings.showArrows" class="cs-nav-prev" #prevArrow (click)="onClickPrevNav()"></div>
+    <div *ngIf="settings.showArrows" class="cs-nav-next" #nextArrow (click)="onClickNextNav()"></div>
+</div>

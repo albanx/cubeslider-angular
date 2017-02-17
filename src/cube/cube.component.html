@@ -1,0 +1,58 @@
+<div class="cube"
+    [style.transition]="transitionProp"
+    [style.z-index]="zIndex"
+    [style.width.px]="width"
+    [style.height.px]="height"
+    [style.left.px]="x"
+    [style.top.px]="y"
+    [style.transform]="currentFace" #cube>
+
+    <div class="cube-face front"
+         [style.width.px]="faceStyles.front.width"
+         [style.height.px]="faceStyles.front.height"
+         [style.background-color]="faceStyles.front.backgroundColor"
+         [style.background-size]="faceStyles.front.backgroundSize"
+         [style.background-position]="faceStyles.front.backgroundPosition"
+         [style.transform]="faceStyles.front.transform" #face0></div>
+
+    <div class="cube-face back"
+         [style.width.px]="faceStyles.back.width"
+         [style.height.px]="faceStyles.back.height"
+         [style.background-color]="faceStyles.back.backgroundColor"
+         [style.background-size]="faceStyles.front.backgroundSize"
+         [style.background-position]="faceStyles.front.backgroundPosition"
+         [style.transform]="faceStyles.back.transform" #face1></div>
+
+    <div class="cube-face right"
+         [style.width.px]="faceStyles.right.width"
+         [style.height.px]="faceStyles.right.height"
+         [style.background-color]="faceStyles.right.backgroundColor"
+         [style.background-size]="faceStyles.front.backgroundSize"
+         [style.background-position]="faceStyles.front.backgroundPosition"
+         [style.transform]="faceStyles.right.transform" #face2></div>
+
+    <div class="cube-face left"
+         [style.width.px]="faceStyles.left.width"
+         [style.height.px]="faceStyles.left.height"
+         [style.background-color]="faceStyles.left.backgroundColor"
+         [style.background-size]="faceStyles.front.backgroundSize"
+         [style.background-position]="faceStyles.front.backgroundPosition"
+         [style.transform]="faceStyles.left.transform" #face3></div>
+
+    <div class="cube-face top"
+         [style.width.px]="faceStyles.top.width"
+         [style.height.px]="faceStyles.top.height"
+         [style.background-color]="faceStyles.top.backgroundColor"
+         [style.background-size]="faceStyles.front.backgroundSize"
+         [style.background-position]="faceStyles.front.backgroundPosition"
+         [style.transform]="faceStyles.top.transform" #face4></div>
+
+    <div class="cube-face bottom"
+         [style.width.px]="faceStyles.bottom.width"
+         [style.height.px]="faceStyles.bottom.height"
+         [style.background-color]="faceStyles.bottom.backgroundColor"
+         [style.background-size]="faceStyles.front.backgroundSize"
+         [style.background-position]="faceStyles.front.backgroundPosition"
+         [style.transform]="faceStyles.bottom.transform" #face5></div>
+
+</div>

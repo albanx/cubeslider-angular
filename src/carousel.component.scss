@@ -1,0 +1,173 @@
+.cs-container {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 60%;
+    background-color: transparent;
+    max-height: inherit;
+    a {
+        background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICR‌​AEAOw==');
+        max-height: inherit;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+        max-height: inherit;
+    }
+
+    .cs-nav-next, .cs-nav-prev {
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        border-radius: 6px;
+        background-image: url(images/images.png);
+        background-color: rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        top: 50%;
+        margin-top: -22.5px;
+    }
+
+    .cs-nav-next {
+        right: 0;
+        background-position: -65px 2px;
+    }
+
+    .cs-nav-prev {
+        left: 0;
+        background-position: -25px 2px;
+    }
+
+    .cs-nav-next:hover, .cs-nav-prev:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .cs-nav-cont {
+        position: absolute;
+        left: 45px;
+        bottom: -25px;
+        z-index: 20;
+    }
+
+    .cs-nav-cont {
+        span {
+            background-image: url(images/images.png);
+            width: 24px;
+            height: 24px;
+            float: left;
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            cursor: pointer;
+        }
+    }
+
+    .cs-nav-cont span:hover, .cs-nav-cont span.cs-current {
+        background-position: 0px -24px;
+        opacity: 1.0;
+    }
+
+
+    .cs-shadow {
+        position: absolute;
+        background: transparent url(images/shadow.png) no-repeat top left;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background-size: contain;
+        top: 78%;
+    }
+
+    .cs-title {
+        background-color: black;
+        bottom: 0;
+        color: white;
+        display: none;
+        float: left;
+        font-family: 'Volkhov', Georgia, sans-serif;
+        font-size: 130%;
+        font-style: italic;
+        font-weight: 400;
+        left: 0;
+        line-height: 38px;
+        margin-bottom: 0;
+        opacity: 0.8;
+        padding: 0 10px;
+        position: absolute;
+        right: 0;
+    }
+
+    .cs-cubes {
+        position: relative;
+    }
+
+    .cs-animation-box {
+        //width: 100%;
+        //height: 100%;
+        //position: absolute;
+        //top: 0;
+        //bottom: 0;
+        //right: 0;
+        //left: 0;
+    }
+
+}
+
+.cs-slider {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    max-height: inherit;
+    overflow: hidden;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.cs-container .cs-nav-play {
+    background-image: url("images/images.png");
+    background-position: -150px -6px;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 45px;
+    bottom: -25px;
+    cursor: pointer;
+}
+
+.cs-container .cs-nav-play.cs-nav-stop {
+    background-position: -117px -6px;
+}
+
+
+
+/* Fallback Style */
+.cs-slider-fb-wrapper {
+    overflow: hidden;
+}
+
+.cs-slider-fb img {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.cs-loader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(images/loader.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    z-index: 1001;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .cs-container {
+        width: 100%;
+    }
+}
